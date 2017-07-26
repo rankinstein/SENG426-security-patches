@@ -1,0 +1,65 @@
+{
+  "groups": [
+    {
+      "name": "jhipster",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties"
+    },
+    {
+      "name": "jhipster.async",
+      "sourceMethod": "getAsync()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Async"
+    },
+    {
+      "name": "jhipster.cache",
+      "sourceMethod": "getCache()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Cache"
+    },
+    {
+      "name": "jhipster.http",
+      "sourceMethod": "getHttp()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Http"
+    },
+    {
+      "name": "jhipster.logging",
+      "sourceMethod": "getLogging()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Logging"
+    },
+    {
+      "name": "jhipster.mail",
+      "sourceMethod": "getMail()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Mail"
+    },
+    {
+      "name": "jhipster.metrics",
+      "sourceMethod": "getMetrics()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Metrics"
+    },
+    {
+      "name": "jhipster.ribbon",
+      "sourceMethod": "getRibbon()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Ribbon"
+    },
+    {
+      "name": "jhipster.security",
+      "sourceMethod": "getSecurity()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Security"
+    },
+    {
+      "name": "jhipster.swagger",
+      "sourceMethod": "getSwagger()",
+      "sourceType": "com.acme.config.JHipsterProperties",
+      "type": "com.acme.config.JHipsterProperties$Swagger"
+    }
+  ],
+  "hints": [],
+  "properties": []
+}
