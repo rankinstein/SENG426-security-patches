@@ -34,6 +34,7 @@
 
         $timeout(function () {
             angular.element('.form-group:eq(1)>input').focus();
+            generate();
         });
 
         function toggleVisible() {
@@ -65,7 +66,7 @@
             }
 
             for (var i = 0; i < vm.genOptions.length; i++) {
-                var position = Math.round(Math.random() * chars.length);
+                var position = Math.round(Math.random() * (chars.length-1));
 
                 if (vm.genOptions.repetition) {
                     if (vm.password.indexOf(chars[position]) === -1) {
