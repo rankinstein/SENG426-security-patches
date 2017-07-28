@@ -66,7 +66,7 @@ public class AcmeApp {
 		log.info("\n----------------------------------------------------------\n\t"
 			+ "Application '{}' is running! Access URLs:\n\t"
 			+ "Local: \t\thttp://localhost:{}\n\t"
-			+ "External: \thttp://{}:{}\n----------------------------------------------------------",
+			+ "External(This might subject to ip spoofing): \thttp://{}:{}\n----------------------------------------------------------",
 			env.getProperty("spring.application.name"),
 			env.getProperty("server.port"),
 			InetAddress.getLocalHost().getHostAddress(),
