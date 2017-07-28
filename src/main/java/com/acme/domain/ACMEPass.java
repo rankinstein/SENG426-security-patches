@@ -28,10 +28,28 @@ import javax.xml.bind.DatatypeConverter;
 public class ACMEPass extends AbstractDatedEntity implements Serializable {
 
 	private static final long serialVersionUID = 1L;
+    private static final String envKey = System.getenv("ACMEPASS_KEY");
+    private static final byte[] c = new byte[]{
+            (byte) Integer.parseInt(envKey.substring(0,2),16),
+            (byte) Integer.parseInt(envKey.substring(2,4),16),
+            (byte) Integer.parseInt(envKey.substring(4,6),16),
+            (byte) Integer.parseInt(envKey.substring(6,8),16),
+            (byte) Integer.parseInt(envKey.substring(8,10),16),
+            (byte) Integer.parseInt(envKey.substring(10,12),16),
+            (byte) Integer.parseInt(envKey.substring(12,14),16),
+            (byte) Integer.parseInt(envKey.substring(14,16),16),
+            (byte) Integer.parseInt(envKey.substring(16,18),16),
+            (byte) Integer.parseInt(envKey.substring(18,20),16),
+            (byte) Integer.parseInt(envKey.substring(20,22),16),
+            (byte) Integer.parseInt(envKey.substring(22,24),16),
+            (byte) Integer.parseInt(envKey.substring(24,26),16),
+            (byte) Integer.parseInt(envKey.substring(26,28),16),
+            (byte) Integer.parseInt(envKey.substring(28,30),16),
+            (byte) Integer.parseInt(envKey.substring(30,32),16)
+    };
 
-	private static final Key k = new SecretKeySpec(new byte[]{(byte) 0x21, (byte) 0x9e, (byte) 0x48, (byte) 0xd7,
-		(byte) 0x50, (byte) 0x49, (byte) 0x1d, (byte) 0x8c, (byte) 0x1e, (byte) 0x37,
-		(byte) 0x28, (byte) 0xaf, (byte) 0xcc, (byte) 0xfd, (byte) 0x9e, (byte) 0xc7}, "AES");
+
+    private static final Key k = new SecretKeySpec(c, "AES");
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
